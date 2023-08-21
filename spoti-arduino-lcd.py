@@ -25,8 +25,6 @@ while (current_song == old_song):
     sleep(1)
     res = sp.current_user_playing_track()
     if (res['item'] is not None):
-        #print("-------------------start debug------------------")
-        #pprint(res)
         current_song = res['item']['name']
         artist_name = "by " + res['item']['album']['artists'][0]['name']
         if (current_song != old_song):
