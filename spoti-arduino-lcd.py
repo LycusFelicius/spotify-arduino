@@ -31,10 +31,8 @@ while (current_song == old_song):
             old_song = current_song
             try:
                 arduino.write(current_song.encode())
-                #print(song_name)
                 sleep(1.1)
                 arduino.write(artist_name.encode())
-                #print(artist_name)
 
             except OSError:
                 print("Write failed!")
